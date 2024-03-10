@@ -3,4 +3,7 @@
     
     <string name="nav_settings_title">Settings</string>
     <string name="nav_about_title">About</string>
+
+    <string name="dialog_button_allow">Allow</string>
+    <string name="dialog_button_dismiss">Dismiss</string>
 </resources>
