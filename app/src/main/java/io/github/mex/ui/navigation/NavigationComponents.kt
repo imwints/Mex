@@ -26,9 +26,9 @@ fun NavDrawerContent(modifier: Modifier = Modifier) {
             icon = {
                 Icon(
                     imageVector = Icons.Outlined.SdCard,
-                    contentDescription = "Internal storage"
+                    contentDescription = "Internal storage",
                 )
-            }
+            },
         )
         NavDrawerSection()
         NavDrawerItem(
@@ -38,9 +38,9 @@ fun NavDrawerContent(modifier: Modifier = Modifier) {
             icon = {
                 Icon(
                     imageVector = Icons.Outlined.Settings,
-                    contentDescription = "Settings"
+                    contentDescription = "Settings",
                 )
-            }
+            },
         )
     }
 }
@@ -51,7 +51,10 @@ fun NavDrawerSection(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun NavDrawerSectionHeader(text: String, modifier: Modifier = Modifier) {
+fun NavDrawerSectionHeader(
+    text: String,
+    modifier: Modifier = Modifier,
+) {
     Text(text = text, modifier = modifier.padding(start = 32.dp))
 }
 
@@ -62,7 +65,7 @@ fun NavDrawerItem(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     icon: (@Composable () -> Unit)? = null,
-    badge: (@Composable () -> Unit)? = null
+    badge: (@Composable () -> Unit)? = null,
 ) {
     NavigationDrawerItem(
         label = label,
@@ -70,7 +73,7 @@ fun NavDrawerItem(
         onClick = onClick,
         modifier = modifier.padding(horizontal = 16.dp),
         icon = icon,
-        badge = badge
+        badge = badge,
     )
 }
 

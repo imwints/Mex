@@ -1,3 +1,5 @@
+import java.net.URI
+
 pluginManagement {
     repositories {
         google {
@@ -16,6 +18,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // For pre-releases of the kotlin compose compiler
+        maven {
+            url = URI("https://androidx.dev/storage/compose-compiler/repository")
+        }
     }
 }
 

@@ -5,11 +5,9 @@ import java.nio.file.Path
 import kotlin.io.path.listDirectoryEntries
 
 object FilesystemRepository {
-
     init {
         System.loadLibrary("filesystem")
     }
 
-    fun listFiles(path: Path = Environment.getExternalStorageDirectory().toPath()): List<Path> =
-        path.listDirectoryEntries()
+    fun listFiles(path: Path = Environment.getExternalStorageDirectory().toPath()): List<Path> = path.listDirectoryEntries()
 }

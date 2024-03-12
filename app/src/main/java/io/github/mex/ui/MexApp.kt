@@ -1,48 +1,23 @@
-package io.github.mex
+package io.github.mex.ui
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.outlined.InsertDriveFile
-import androidx.compose.material.icons.automirrored.outlined.NoteAdd
-import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material.icons.outlined.Settings
-import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalDrawerSheet
-import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.NavigationDrawerItem
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SnackbarDuration
-import androidx.compose.material3.SnackbarHost
-import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import kotlinx.coroutines.launch
+import com.ramcosta.composedestinations.DestinationsNavHost
+import com.ramcosta.composedestinations.generated.NavGraphs
 
 @Composable
 fun MexApp(modifier: Modifier = Modifier) {
-
+    val navController = rememberNavController()
+    DestinationsNavHost(
+        navGraph = NavGraphs.root,
+        modifier = modifier,
+        navController = navController
+    )
 }
-//@OptIn(ExperimentalMaterial3Api::class)
-//@Composable
-//fun MexApp(modifier: Modifier = Modifier) {
+// @OptIn(ExperimentalMaterial3Api::class)
+// @Composable
+// fun MexApp(modifier: Modifier = Modifier) {
 //    val snackbarHostState = remember { SnackbarHostState() }
 //    val scope = rememberCoroutineScope()
 //    val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
@@ -169,4 +144,4 @@ fun MexApp(modifier: Modifier = Modifier) {
 //            )
 //        }
 //    }
-//}
+// }
